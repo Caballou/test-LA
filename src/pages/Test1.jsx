@@ -76,10 +76,6 @@ const Test1 = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [finished]);
 
-  if (randomPairs) {
-    console.log(randomPairs);
-  }
-
   return (
     <>
       {randomPairs && !choose && !finished ? (
