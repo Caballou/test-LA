@@ -6,7 +6,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 const Test2 = () => {
   const [disabledAudio, setDisabledAudio] = useState(false);
   const [enabledImg, setEnabledImg] = useState(false);
-  const [count, setCount] = useState(8);
+  const [count, setCount] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [randomImages, setRandomImages] = useState();
   const [data, setData] = useState(useLocation().state);

@@ -14,7 +14,11 @@ const Form = () => {
         data
       )
       .then((response) => {
-        console.log(response);
+        if (response.status === 200) {
+          navigate("/gracias");
+        } else {
+          alert("Algo salió mal al enviar tus datos, intentá nuevamente");
+        }
       });
   };
 
@@ -28,7 +32,6 @@ const Form = () => {
             onSubmit={(e) => {
               e.preventDefault();
               submitHandler();
-              navigate("/gracias");
             }}
             className="flex flex-col items-center  max-w-[800px]"
           >

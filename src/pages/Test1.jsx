@@ -1,12 +1,12 @@
 import arrayShuffle from "array-shuffle";
 import { useEffect, useState } from "react";
-import { group1, group2 } from "../pairs";
+import { group1, group2, group3 } from "../pairs";
 import "./Test.css";
 import { useNavigate } from "react-router-dom";
 
 const Test1 = () => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [count, setCount] = useState(13);
+  const [count, setCount] = useState(0);
   const [randomPairs, setRandomPairs] = useState();
   const [data, setData] = useState({});
   const [disabledA, setDisabledA] = useState(false);
@@ -55,14 +55,16 @@ const Test1 = () => {
   };
 
   useEffect(() => {
-    const group = Math.floor(Math.random() * 2);
+    const group = Math.floor(Math.random() * 3);
     if (group === 0) {
       setRandomPairs(arrayShuffle(group1));
-    } else {
+    } else if (group === 1) {
       setRandomPairs(arrayShuffle(group2));
+    } else {
+      setRandomPairs(arrayShuffle(group3));
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [group1, group2]);
+  }, [group1, group2, group3]);
 
   useEffect(() => {
     if (finished) {
@@ -73,6 +75,10 @@ const Test1 = () => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [finished]);
+
+  if (randomPairs) {
+    console.log(randomPairs);
+  }
 
   return (
     <>
