@@ -35,7 +35,7 @@ const Form = () => {
             }}
             className="flex flex-col items-center  max-w-[800px]"
           >
-            <div className="flex items-center flex-col">
+            {/* <div className="flex items-center flex-col">
               <label className="mt-4 mb-2">Nombre</label>
               <input
                 className="text-center"
@@ -45,7 +45,7 @@ const Form = () => {
                   setData({ ...data, [e.target.name]: e.target.value })
                 }
               ></input>
-            </div>
+            </div> */}
             <div className="flex flex-col items-center">
               <label className="mt-4 mb-2">Edad</label>
               <input
@@ -174,7 +174,46 @@ const Form = () => {
                 </div>
               </div>
             </div>
-
+            <label className="mt-4 mb-2">
+              ¿Alguna vez has asistido a una misa dentro de un edificio
+              religioso? (Iglesía, capilla, etc)
+            </label>
+            <div className=" flex justify-center">
+              <div className="flex w-fit p-2 border border-white rounded-xl">
+                <div className="mx-4">
+                  <label className="px-2">Sí</label>
+                  <input
+                    className="h-[20px] w-[20px]"
+                    type="radio"
+                    name="mass"
+                    value="1"
+                    required
+                    onChange={(e) =>
+                      setData({
+                        ...data,
+                        [e.target.name]: e.target.value,
+                      })
+                    }
+                  ></input>
+                </div>
+                <div className="mx-4">
+                  <label className="px-2">No</label>
+                  <input
+                    className="h-[20px] w-[20px]"
+                    type="radio"
+                    name="mass"
+                    value="0"
+                    required
+                    onChange={(e) =>
+                      setData({
+                        ...data,
+                        [e.target.name]: e.target.value,
+                      })
+                    }
+                  ></input>
+                </div>
+              </div>
+            </div>
             <button
               type="submit"
               className="mt-10 border-2 border-[#965fd4] w-[40%]"
