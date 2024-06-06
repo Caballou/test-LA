@@ -97,9 +97,7 @@ const Form = () => {
                 </div>
               </div>
             </div>
-            <label className="mt-4 mb-2">
-              ¿Prestás atención a cómo suenan las habitaciones/recintos?
-            </label>
+            <label className="mt-4 mb-2">¿Sos músico?</label>
             <div className=" flex justify-center">
               <div className="flex w-fit p-2 border border-white rounded-xl">
                 <div className="mx-4">
@@ -107,7 +105,7 @@ const Form = () => {
                   <input
                     className="h-[20px] w-[20px]"
                     type="radio"
-                    name="room"
+                    name="musician"
                     value="1"
                     required
                     onChange={(e) =>
@@ -123,7 +121,7 @@ const Form = () => {
                   <input
                     className="h-[20px] w-[20px]"
                     type="radio"
-                    name="room"
+                    name="musician"
                     value="0"
                     required
                     onChange={(e) =>
@@ -176,46 +174,7 @@ const Form = () => {
                 </div>
               </div>
             </div>
-            <label className="mt-4 mb-2">
-              ¿Alguna vez has asistido a una misa dentro de un edificio
-              religioso? (Iglesía, capilla, etc)
-            </label>
-            <div className=" flex justify-center">
-              <div className="flex w-fit p-2 border border-white rounded-xl">
-                <div className="mx-4">
-                  <label className="px-2">Sí</label>
-                  <input
-                    className="h-[20px] w-[20px]"
-                    type="radio"
-                    name="mass"
-                    value="1"
-                    required
-                    onChange={(e) =>
-                      setData({
-                        ...data,
-                        [e.target.name]: e.target.value,
-                      })
-                    }
-                  ></input>
-                </div>
-                <div className="mx-4">
-                  <label className="px-2">No</label>
-                  <input
-                    className="h-[20px] w-[20px]"
-                    type="radio"
-                    name="mass"
-                    value="0"
-                    required
-                    onChange={(e) =>
-                      setData({
-                        ...data,
-                        [e.target.name]: e.target.value,
-                      })
-                    }
-                  ></input>
-                </div>
-              </div>
-            </div>
+
             <button
               type="submit"
               className="mt-10 border-2 border-[#965fd4] w-[40%]"

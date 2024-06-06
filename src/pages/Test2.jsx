@@ -152,7 +152,7 @@ const Test2 = () => {
         <div className=" w-full h-[100dvh] flex flex-col justify-center items-center">
           <div className="border-2 border-[#965fd4] flex justify-center w-fit m-2 p-5 text-3xl items-center rounded-xl">
             <p className="text-center">
-              Ha seleccionado la imagen: <br />
+              Has seleccionado la imagen: <br />
               <p className="border-2 text-4xl border-red-500 rounded-md m-8 p-4 w-[80px] text-[#8bd450] inline-block">
                 {selectedImage}
               </p>{" "}
@@ -165,12 +165,12 @@ const Test2 = () => {
         <div className=" w-full h-[100dvh] flex flex-col justify-center items-center">
           <div className="border-2 border-[#965fd4] flex justify-center w-fit m-2 p-5 text-3xl items-center rounded-xl">
             <p className="text-center">
-              Ha seleccionado el audio: <br />
+              Has seleccionado el audio: <br />
               <p className="border-2 text-4xl border-red-500 rounded-md m-8 p-4 w-[80px] text-[#8bd450] inline-block">
                 {selectedImage}
               </p>{" "}
               <br />
-              Gracias por completar los Test, no cierres la ventana!
+              Gracias por completar el test, no cierres la ventana!
               <br />
               Solo unas preguntitas mas...
             </p>
